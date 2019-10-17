@@ -28,7 +28,7 @@ void draw()
     rotate(0.523599);
     ellipse((xCentre + xWave), (yCentre + yWave), diam-5, diam-5);
     //ellipse((xCentre + xWave)+18, (yCentre + yWave)+18, diam-6, diam-6);
-    //noFill();
+    fill(#10F82D);
     amp += 0.5;
     
   }
