@@ -7,7 +7,7 @@ float offset;
 
 void setup()
 {
-  size(1080, 1080);
+  size(1080, 800);
   offset = diam/2;
 }
 
