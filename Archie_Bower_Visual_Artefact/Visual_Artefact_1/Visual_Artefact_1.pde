@@ -1,5 +1,5 @@
 /* 
-== Goal: Create an animation that 
+== Goal: Create an animation that starts as a single circle and develops into the 
 */
 
 float freq = 0.5; //frequency
@@ -15,10 +15,11 @@ void setup()
 
 void draw()
 {
-  background(#142269); // #801912 (burgundy) or #142269 (navy blue)
+  //background(#142269); // #801912 (burgundy) or #142269 (navy blue)
 
   for (int i=0; i<=1000; i++)
   {
+    background(#142269);
     float xCentre = width/2;
     float yCentre = height/2;
     float xWave = cos(i*freq)*amp;
@@ -31,6 +32,7 @@ void draw()
    // ellipse(xCentre + xWave +70, yCentre + yWave, diam, diam);
     //rotate(0.523);
     fill(#801912);
+    loop();
   }
 }
 
