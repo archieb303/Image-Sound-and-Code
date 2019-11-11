@@ -1,3 +1,7 @@
+/* 
+== Goal: Create an animation that 
+*/
+
 float freq = 0.5; //frequency
 float amp = 20; //amplitude
 float diam = 15; //diameter
@@ -5,7 +9,7 @@ float offset;
 
 void setup()
 {
-  size (2100,950);
+  size (1080, 800);
   offset = diam/2;
 }
 

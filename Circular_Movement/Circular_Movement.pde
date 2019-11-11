@@ -13,7 +13,7 @@ void setup()
 
 void draw()
 {
-  background(#24B789);
+  background(#142269);
 
   for (int i=0; i<=1000; i++)
   {
@@ -22,14 +22,14 @@ void draw()
     float xWave = cos(i*freq)*amp;
     float yWave = sin(i*freq)*amp;
 
-    stroke(#248c63);
+    stroke(#fafca9);
     strokeWeight(3);
 
     ellipse(xCentre + xWave, yCentre + yWave, diam, diam);
     rotate(0.523599);
     ellipse((xCentre + xWave), (yCentre + yWave), diam-5, diam-5);
     //ellipse((xCentre + xWave)+18, (yCentre + yWave)+18, diam-6, diam-6);
-    fill(#10F82D);
+    fill(#801912);
     amp += 0.5;
   }
   //noLoop;
