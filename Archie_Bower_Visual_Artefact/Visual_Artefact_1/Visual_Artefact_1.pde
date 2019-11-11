@@ -20,11 +20,14 @@ void draw()
     float xWave = cos(i*freq)*amp;
     float yWave = sin(i*freq)*amp;
   
-    stroke(#fafca9);
+    stroke(#fafca9); //changes stroke color to pastel yellow
     strokeWeight(3);
 
     ellipse(xCentre + xWave, yCentre + yWave, diam, diam);
-    rotate(0.523);
+   // ellipse(xCentre + xWave +70, yCentre + yWave, diam, diam);
+    //rotate(0.523);
     fill(#801912);
   }
 }
+
+//checking if branches work
