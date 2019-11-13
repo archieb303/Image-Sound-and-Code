@@ -3,9 +3,15 @@
 int radius = 1;
 boolean grow = true;
 
+//random varibles for radius
+  int rad1 = int(random(100,250));
+  //int rad1 = 100;
+
+
+
 void setup()
 {
-  size(500, 500);
+  size(1000, 1000);
   //background(#B7CCE3);
   ellipseMode(RADIUS);
 }
@@ -23,34 +29,34 @@ void draw()
   if (grow)
   {
     radius++;
-    if (radius >= 130 && radius < 140)
+    if (radius >= rad1 && radius < rad1+10)
     {
       stroke(start);
     }
-    else if (radius >= 140 && radius < 145)
+    else if (radius >= rad1+10 && radius < rad1+15)
     {
       stroke(mid);
     }
-    else if(radius >=145 && radius < 147)
+    else if(radius >=rad1+15 && radius < rad1+17)
     {
       stroke(end);
     }
-    else if(radius >= 147)
+    else if(radius >= rad1+17)
     {
       stroke(#B7CCE3);
     }
   }
   //stroke(Mid);
   background(#B7CCE3);
-  ellipse(100, 100, radius, radius);
-  //ellipse(200, 100, radius, radius);
-  //ellipse(300, 100, radius, radius);
-  //ellipse(400, 100, radius, radius);
-  //ellipse(100, 200, radius, radius);
-  //ellipse(100, 300, radius, radius);
-  //ellipse(100, 400, radius, radius);
-  //ellipse(200, 200, radius, radius);
-  //ellipse(300, 300, radius, radius);
+  ellipse(200, 200, radius, radius);
+  ellipse(400, 200, radius, radius);
+  ellipse(300, 200, radius, radius);
+  ellipse(400, 200, radius, radius);
+  ellipse(200, 400, radius, radius);
+  ellipse(200, 600, radius, radius);
+  ellipse(200, 800, radius, radius);
+  ellipse(400, 400, radius, radius);
+  ellipse(600, 600, radius, radius);
 }
 
 
