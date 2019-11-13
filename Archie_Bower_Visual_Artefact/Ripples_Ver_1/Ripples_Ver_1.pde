@@ -201,6 +201,7 @@ void mousePressed()
 {
 
 }
+<<<<<<< HEAD
 
 // increments palette to change colour palette of sandbox
 void keyTyped()
@@ -210,3 +211,5 @@ void keyTyped()
         r1.changePalette();
     }
 }
+=======
+>>>>>>> parent of aa0b6ca... atom test
