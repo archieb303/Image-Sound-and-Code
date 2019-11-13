@@ -28,7 +28,7 @@ void draw()
         }
     }
 //==============================================================================
-//SPLASHSCREEN    
+//SPLASHSCREEN
   stroke(#19323C); // sets default colour for ripple
   strokeWeight(3);
   noFill(); // removes fill from ellipse to make it look like a ripple
