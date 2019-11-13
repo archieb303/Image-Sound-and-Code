@@ -2,9 +2,15 @@ int palette = 1;
 int radius = 1;
 boolean grow = true; // used to trigger ripple size increase
 
+color line;
+color background;
+color start;
+color mid;
+color end;
+
 //random varibles for radius
-  int rad1 = int(random(100,250)); // generates a random number for max radius
-  //int rad1 = 100;
+  //int rad1 = int(random(100,250)); // generates a random number for max radius
+  int rad1 = 100;
 
 
 void setup()
@@ -20,15 +26,13 @@ void draw()
 {
 //=======================================================================
 //COLOR PALETTE
-    if(keyPressed)
+    if(keyPressed) 
     {
         if(key == 'c' || key == 'C')
         {
             palette++;
         }
     }
-<<<<<<< Updated upstream
-=======
     if (palette == 1)
     {
         line = #19323C;
@@ -46,17 +50,20 @@ void draw()
         mid = lerpColor(#F06543, #A93F55, 0.3);
         end = lerpColor(#F06543, #A93F55, 0.1);
     }
->>>>>>> Stashed changes
+    if (palette > 2)
+    {
+        palette = 1;
+    }
 //==============================================================================
 //SPLASHSCREEN
-  stroke(#19323C); // sets default colour for ripple
+  //stroke(#19323C); // sets default colour for ripple
   strokeWeight(3);
   noFill(); // removes fill from ellipse to make it look like a ripple
 
   //background(#B7CCE3);
-  color start = lerpColor(#B7CCE3,#19323C,0.6); //creates colours for fade out of ripple
-  color mid = lerpColor(#B7CCE3,#19323C,0.3);
-  color end = lerpColor(#B7CCE3,#19323C,0.1);
+  //color start = lerpColor(#B7CCE3,#19323C,0.6); //creates colours for fade out of ripple
+  //color mid = lerpColor(#B7CCE3,#19323C,0.3);
+  //color end = lerpColor(#B7CCE3,#19323C,0.1);
 
   if (grow)
   {
@@ -75,7 +82,7 @@ void draw()
     }
   }
   //stroke(Mid);
-  background(#B7CCE3);
+  background(background);
   ellipse(200, 200, radius, radius);
   ellipse(400, 200, radius, radius);
   ellipse(300, 200, radius, radius);
