@@ -27,6 +27,26 @@ void draw()
             palette++;
         }
     }
+<<<<<<< Updated upstream
+=======
+    if (palette == 1)
+    {
+        line = #19323C;
+        background = #B7CCE3;
+        start = lerpColor(#B7CCE3,#19323C,0.6); //creates colours for fade out of ripple
+        mid = lerpColor(#B7CCE3,#19323C,0.3);
+        end = lerpColor(#B7CCE3,#19323C,0.1);
+
+    }
+    if (palette == 2)
+    {
+        line = #A93F55;
+        background = #F06543;
+        start = lerpColor(#F06543, #A93F55, 0.6);
+        mid = lerpColor(#F06543, #A93F55, 0.3);
+        end = lerpColor(#F06543, #A93F55, 0.1);
+    }
+>>>>>>> Stashed changes
 //==============================================================================
 //SPLASHSCREEN
   stroke(#19323C); // sets default colour for ripple
@@ -51,7 +71,7 @@ void draw()
       stroke(end);
     }
     else if(radius >= rad1+17){
-      stroke(#B7CCE3);
+      stroke(background);
     }
   }
   //stroke(Mid);
