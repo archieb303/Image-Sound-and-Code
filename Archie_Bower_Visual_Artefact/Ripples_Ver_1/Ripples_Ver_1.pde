@@ -1,3 +1,4 @@
+
 int palette = 1;
 int radius = 1;
 boolean grow = true; // used to trigger ripple size increase
@@ -6,6 +7,11 @@ boolean grow = true; // used to trigger ripple size increase
   int rad1 = int(random(100,250)); // generates a random number for max radius
   //int rad1 = 100;
 
+color line;
+color background;
+color start;
+color mid;
+color end;
 
 void setup()
 {
@@ -14,46 +20,47 @@ void setup()
   ellipseMode(RADIUS); // sets ellipse mode to radius
 }
 
-//=============================================================================
-//SPLASHSCREEN + INFO PAGE + COLOR PALETTE
+
 void draw()
 {
-//=======================================================================
-//COLOR PALETTE
-    if(keyPressed)
-    {
-        if(key == 'c' || key == 'C')
-        {
-            palette++;
-        }
-    }
-    if (palette == 1)
-    {
-        line = #19323C;
-        background = #B7CCE3;
-        start = lerpColor(#B7CCE3,#19323C,0.6); //creates colours for fade out of ripple
-        mid = lerpColor(#B7CCE3,#19323C,0.3);
-        end = lerpColor(#B7CCE3,#19323C,0.1);
-
-    }
-    if (palette == 2)
-    {
-        line = #A93F55;
-        background = #F06543;
-        start = lerpColor(#F06543, #A93F55, 0.6);
-        mid = lerpColor(#F06543, #A93F55, 0.3);
-        end = lerpColor(#F06543, #A93F55, 0.1);
-    }
 //==============================================================================
 //SPLASHSCREEN
-  stroke(#19323C); // sets default colour for ripple
+  stroke(line); // sets default colour for ripple
   strokeWeight(3);
   noFill(); // removes fill from ellipse to make it look like a ripple
+  if (palette == 1)
+  {
+      line = #19323C; // sets the color for the ripple
+      background = #B7CCE3; // sets the color for the background
+      start = lerpColor(#B7CCE3,#19323C,0.6); //creates colours for fade out of ripple
+      mid = lerpColor(#B7CCE3,#19323C,0.3);
+      end = lerpColor(#B7CCE3,#19323C,0.1);
 
+  }
+  if (palette == 2)
+  {
+      line = #A93F55;
+      background = #F06543;
+      start = lerpColor(#F06543, #A93F55, 0.6);
+      mid = lerpColor(#F06543, #A93F55, 0.3);
+      end = lerpColor(#F06543, #A93F55, 0.1);
+  }
+  if (palette == 3)
+  {
+      line = #11151C;
+      background = #212D40;
+      start = lerpColor(#212D40, #11151C, 0.6);
+      mid = lerpColor(#212D40, #11151C, 0.3);
+      end = lerpColor(#212D40, #11151C, 0.1);
+  }
+  if (palette > 3)
+  {
+      palette = 1;
+  }
   //background(#B7CCE3);
-  color start = lerpColor(#B7CCE3,#19323C,0.6); //creates colours for fade out of ripple
-  color mid = lerpColor(#B7CCE3,#19323C,0.3);
-  color end = lerpColor(#B7CCE3,#19323C,0.1);
+  //color start = lerpColor(#B7CCE3,#19323C,0.6); //creates colours for fade out of ripple
+  //color mid = lerpColor(#B7CCE3,#19323C,0.3);
+  //color end = lerpColor(#B7CCE3,#19323C,0.1);
 
   if (grow)
   {
@@ -72,7 +79,7 @@ void draw()
     }
   }
   //stroke(Mid);
-  background(#B7CCE3);
+  background(background);
   ellipse(200, 200, radius, radius);
   ellipse(400, 200, radius, radius);
   ellipse(300, 200, radius, radius);
@@ -85,7 +92,15 @@ void draw()
 
 
 }
-
+//=======================================================================
+//COLOR PALETTE
+void keyTyped()
+{
+    if(key == 'c' || key == 'C')
+    {
+        palette++;
+    }
+}
 //===================================================================
 // SANDBOX
 void mousePressed()
