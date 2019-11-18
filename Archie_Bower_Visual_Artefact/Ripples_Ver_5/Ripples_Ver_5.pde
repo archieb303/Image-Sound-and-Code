@@ -1,4 +1,4 @@
-
+// branch to shrink stuff down
 int palette = 1;
 int radius = 1;
 boolean grow = true; // used to trigger ripple size increase
@@ -81,6 +81,7 @@ void draw()
   //stroke(Mid);
   background(background);
   ellipse(200, 200, radius, radius);
+  //ripple();
   ellipse(400, 200, radius, radius);
   ellipse(600, 200, radius, radius);
   ellipse(800, 200, radius, radius);
@@ -114,7 +115,7 @@ void keyTyped()
 }
 //===================================================================
 // SANDBOX
-void mousePressed()
+void mouseClicked()
 {
-
+   
 }
